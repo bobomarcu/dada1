@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DADA</title>
+    <link rel="stylesheet" type="text/css" href="dada.css">
+</head>
+<body>
+    <div class="tot">
+   <div class="container">
+        <h1 class="in">Vlad Andrada Maria, doresti a fi my gagica?</h1>
+        <form id="lmao">
+            
+            <input type="radio" id="Yes" name="gagica" value="YES">YES</input>
+            
+            <input type="radio" id="css" name="gagica" value="CSS">yes</input>
+          <br>
+          <button type="button" onclick="clicked()">Ready!</button>
+            
+        </form>
+    </div>
+    <h1 class="rez" id="result"></h1>
+    
+    <script>
+        function clicked() {
+            var ele = document.getElementsByName("gagica");
+              
+            for(i = 0; i < ele.length; i++) {
+                if(ele[i].checked){
+                document.getElementById("result").innerHTML= "YESSS! Bobs happy!<3<3";
+                document.getElementById("poza").innerHTML= display_image('bobodada.jpg', 500, 500, );
+                }
+                else{
+                    document.getElementById("result").innerHTML= "YESSS! Bobs happy!<3<3";
+                    document.getElementById("poza").innerHTML= display_image('bobodada.jpg', 500, 500);
+                }
+            }
+            function display_image(src, width, height,) {
+            var a = document.createElement("img");
+            a.src = src;
+            a.width = width;
+            a.height = height;
+            document.body.appendChild(a);
+        }
+    }
+    </script>
+    </div>
+    
+</body>
+</html>
